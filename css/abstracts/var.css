@@ -1,0 +1,26 @@
+:root {
+  /*  Paleta de Colores  */
+  --color1  : #547266;
+  /* Verde */
+  --color2  : #ffde75;
+  /* Amarillo */
+  --color3  : #575757;
+  /* Gris (textos) */
+  --color4  : rgba(67, 67, 67, 0.85);
+  /* Gris Titulos*/
+  /*  Estilos Base  */
+  --bodyBgc : #fff;
+
+  /*  Estilos de Encabezado  */
+  --headerFont-weight   : bold;
+  --headerText-trasform : normal;
+  --headerColor         : #222;
+  --padding             : 2em 1em 0;
+
+  --h1--font-size : 2em;
+  --h2--font-size : 1.6em;
+  --h3--font-size : 1.3em;
+  --h4--font-size : 1em;
+  --h5--font-size : .9em;
+  --h6--font-size : .8em;
+}

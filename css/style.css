@@ -1,0 +1,19 @@
+@layer var,
+base,
+layout,
+header,
+banner,
+services,
+clientes,
+notices,
+footer;
+
+@import './abstracts/var.css'layer(vars);
+@import './base/base.css'layer(base);
+@import './layout/layout.css'layer(layout);
+@import './components/header.css'layer(header);
+@import './components/banner.css'layer(banner);
+@import './components/services.css'layer(services);
+@import './components/clientes.css'layer(clientes);
+@import './components/notices.css'layer(notices);
+@import './components/footer.css'layer(footer);

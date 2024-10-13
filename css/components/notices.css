@@ -1,0 +1,29 @@
+/*noticias*/
+
+.noticias {
+  padding               : 1em;
+  color                 : var(--color3);
+  display               : grid;
+  grid-template-columns : repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap                   : 1rem;
+
+  h3 {
+    font-size  : 1em;
+    text-align : center;
+    display    : block;
+
+    span {
+      color : red;
+    }
+  }
+
+  img {
+    width  : 100%;
+    margin : 1em 0 0;
+  }
+
+  p {
+    margin    : 0 0 1.8em;
+    font-size : 0.8em;
+  }
+}
