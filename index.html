@@ -1,1 +1,106 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/style.css"><link rel="stylesheet" href="./css/boxicons.min.css"><title>Flexbox</title></head><body><!-- HEADER --><header><section><h2>Hair<span> Doctor</span></h2></section><p>A permanent hair loss solution</p><section><span>MENU</span> <span id="click" class="hamburger">&#9776;</span></section><!-- NAVEGATION --><nav><ul id="menuActive"><li><a href="#">Home</a></li><li><a href="#">About us</a></li><li><a href="#">Services</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact</a></li><li><a href="#">Links</a></li></ul></nav></header><!--  BANNER --><section><div class="banner"><img src="./img/slider2.jpg" alt="banner"><div><h2>Effective <span>Hair Restoration</span></h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a facilis ratione harum fugit illum numquam tempora nobis, sunt architecto id alias tempore corrupti, at debitis omnis quia, quae pariatur perferendis ipsa. Totam quo molestiae assumenda officia voluptatem voluptatum possimus!</p><a href="#">More...</a></div></div></section><!--  SERVICES --><div><h2 class="title l-center">Services<span class="subtitle">Lorem ipsum dolor sit amet.</span></h2><section class="services"><div><i class="bx bx-check"></i><h3>Lorem ipsum dolor.</h3><p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p></div><div><i class="bx bxs-hand"></i><h3>Lorem ipsum dolor.</h3><p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p></div><div><i class="bx bx-play"></i><h3>Lorem ipsum dolor.</h3><p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p></div></section></div><!--  CLIENTES--><div><h2 class="clientes__title l-center">This is the list of our recent clients</h2><div><div>◄</div><div>►</div></div><section class="clientes"><div><img src="./img/cliente1.jpg" alt="cliente1"><h3 class="cliente__title">Clinte1</h3><p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, adipisci.</p></div><div><img src="./img/cliente2.jpg" alt="cliente2"><h3 class="cliente__title">Clinte2</h3><p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, iusto!</p></div><div><img src="./img/cliente3.jpg" alt="cliente3"><h3 class="cliente__title">Clinte3</h3><p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, nemo.</p></div></section></div><!--  NOTICIAS --><section><div class="noticias"><div><h3>Hair trasplant <span>Lorem ipsum.</span></h3><img src="./img/personas1.jpg" alt="personas"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p></div><div><h3>Womens hair losse <span>Lorem ipsum.</span></h3><img src="./img/personas2.jpg" alt="personas"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p></div><div><h3>Man hair losse <span>Lorem ipsum.</span></h3><img src="./img/personas3.jpg" alt="personas"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p></div></div></section><!-- FOOTER --><section><footer><div><p>Hair Doctor &copy; | Privacy Policy</p><p>2019 La Paz - Bolivia</p></div></footer></section><script type="module" src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/boxicons.min.css">
+  <title>Flexbox</title>
+</head>
+
+<body><!-- HEADER -->
+  <header>
+    <section>
+      <h1>Hair<span> Doctor</span></h1>
+    </section>
+    <p>A permanent hair loss solution</p>
+    <section><span>MENU</span> <span id="click" class="hamburger">&#9776;</span></section><!-- NAVEGATION -->
+    <nav>
+      <ul id="menuActive">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Links</a></li>
+      </ul>
+    </nav>
+  </header><!--  BANNER -->
+  <section>
+    <div class="banner l-max-width">
+      <div>
+        <img src="./img/slider2.jpg" alt="banner">
+      </div>
+      <div>
+        <h2>Effective <span>Hair Restoration</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus a facilis ratione harum fugit illum numquam.</p><a href="#">More...</a>
+      </div>
+    </div>
+  </section><!--  SERVICES -->
+  <div>
+    <h2 class="title l-center">Services<span class="subtitle">Lorem ipsum dolor sit amet.</span></h2>
+    <section class="services l-max-width">
+      <div><i class="bx bx-check"></i>
+        <h3>Lorem ipsum dolor.</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p>
+      </div>
+      <div><i class="bx bxs-hand"></i>
+        <h3>Lorem ipsum dolor.</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p>
+      </div>
+      <div><i class="bx bx-play"></i>
+        <h3>Lorem ipsum dolor.</h3>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error deleniti odio dignissimos praesentium recusandae.</p>
+      </div>
+    </section>
+  </div><!--  CLIENTES-->
+  <div>
+    <h2 class="clientes__title l-center">This is the list of our recent clients</h2>
+    <section class="clientes l-max-width">
+      <div><img src="./img/cliente1.jpg" alt="cliente1">
+        <h3 class="cliente__title">Clinte1</h3>
+        <p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, adipisci.</p>
+      </div>
+      <div><img src="./img/cliente2.jpg" alt="cliente2">
+        <h3 class="cliente__title">Clinte2</h3>
+        <p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, iusto!</p>
+      </div>
+      <div><img src="./img/cliente3.jpg" alt="cliente3">
+        <h3 class="cliente__title">Clinte3</h3>
+        <p class="cliente__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, nemo.</p>
+      </div>
+    </section>
+  </div><!--  NOTICIAS -->
+  <section>
+    <div class="noticias l-max-width">
+      <div>
+        <h3>Hair trasplant <span>Lorem ipsum.</span></h3><img src="./img/personas1.jpg" alt="personas">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p>
+      </div>
+      <div>
+        <h3>Womens hair losse <span>Lorem ipsum.</span></h3><img src="./img/personas2.jpg" alt="personas">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p>
+      </div>
+      <div>
+        <h3>Man hair losse <span>Lorem ipsum.</span></h3><img src="./img/personas3.jpg" alt="personas">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum dolorem debitis reiciendis, laudantium vel doloremque consectetur unde, impedit officia et sint mollitia! Nisi fugit nihil a iure commodi neque reiciendis.</p>
+      </div>
+    </div>
+  </section><!-- FOOTER -->
+  <section>
+    <footer>
+      <div>
+        <p>Hair Doctor &copy; | Privacy Policy</p>
+        <p>2019 La Paz - Bolivia</p>
+      </div>
+    </footer>
+  </section>
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

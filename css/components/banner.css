@@ -1,38 +1,55 @@
 /*Banner*/
 :where(section:has(.banner)) {
-  background-color : var(--color1);
-  padding          : 0em 1em 1em;
   height           : auto;
+  padding          : 0em 1em 1em;
+  background-color : var(--color1);
+
+  & .banner {
+    display   : flex;
+    flex-wrap : wrap;
+    gap       : 1rem;
+
+
+    div:nth-of-type(1) {
+      flex : 1 0 239px;
+    }
+
+    div:nth-of-type(2) {
+      flex : 1 0 200px;
+    }
+  }
+
+  & .banner img {
+    display      : block;
+    aspect-ratio : 1 / 1;
+  }
 
   h2 {
-    color          : var(--color2);
-    margin         : .8em 0 0;
-    font-size      : .9em;
     font-weight    : 100;
     text-transform : uppercase;
+    color          : var(--color2);
 
     span {
-      text-transform : none;
       font-weight    : 100;
+      text-transform : none;
       color          : var(--color2);
       text-shadow    : 1px 1px 1px black;
     }
   }
 
   p {
-    margin    : 1em 0 1em;
-    font-size : 0.75em;
-    color     : white;
+    margin : 1em 0 1em;
+    color  : white;
   }
 
   a {
-    padding          : .5em;
-    color            : #fff;
-    font-size        : .8em;
-    background-image : linear-gradient(rgba(255, 255, 255, 0.38), rgba(84, 114, 102, 0.62));
-    text-shadow      : 1px 1px 1px black;
+    padding          : .5rem 1rem;
     display          : inline-block;
+    color            : #fff;
+    border-radius    : 4px;
+    background-image : linear-gradient(rgba(255, 255, 255, 0.38), rgba(84, 114, 102, 0.62));
     box-shadow       : 1px 1px 1px rgba(0, 0, 0, 0.26);
+    text-shadow      : 1px 1px 1px black;
 
     &:hover {
       color : var(--color2);

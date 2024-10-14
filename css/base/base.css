@@ -5,7 +5,6 @@ body {
 
 body {
   box-sizing  : border-box;
-  box-sizing  : border-box;
   font-family : 'Poppins', sans-serif;
 }
 
@@ -20,6 +19,18 @@ body {
 }
 
 img {
-  width  : 100%;
-  margin : auto;
+  width : 100%;
+}
+
+p {
+  font-size : clamp(0.8rem, 0.7272727272727273rem + 0.36363636363636354vw, 1rem);
+}
+
+h2 {
+  font-size : clamp(1.5rem, 1.3636363636363635rem + 0.9090909090909091vw, 2rem);
+  opacity   : .7;
+}
+
+h3 {
+  font-size : clamp(1.2rem, 1.0909090909090908rem + 0.7272727272727273vw, 1.5rem);
 }

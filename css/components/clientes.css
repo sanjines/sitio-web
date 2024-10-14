@@ -3,11 +3,10 @@ section:where(.clientes) {
   padding               : 1em;
   color                 : var(--color3);
   display               : grid;
-  grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns : repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap                   : 1rem;
 
   h2 {
-    font-size  : 1.1em;
     padding    : 1em 0;
     text-align : center;
     color      : var(--color3);
@@ -19,13 +18,12 @@ section:where(.clientes) {
   }
 
   h3 {
-    font-size  : 1em;
+    /* font-size  : 1em; */
     margin-top : 0.5em;
   }
 
   p {
-    font-size : 0.8em;
-    padding   : 0 0 1em;
+    padding : 0 0 1em;
   }
 
   .clientes__nav__item--prev {

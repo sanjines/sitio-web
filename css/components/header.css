@@ -1,17 +1,50 @@
 header {
   --c-comp-1       : hsl(58, 100%, 73%);
-  padding          : var(--padding);
+  padding          : 2rem 0 0;
   color            : var(--bodyBgc);
   background-color : var(--color1);
   container-type   : inline-size;
 
+  .hamburger {
+    font-size : 1.5rem;
+  }
+
+  @container(width > 800px) {
+
+    section:nth-of-type(2) {
+      position : absolute;
+      display  : none;
+    }
+
+    nav {
+      margin-block-start : 1.5rem;
+
+      >ul {
+        height           : 52.8px;
+        max-height       : none;
+        padding          : none;
+        display          : flex;
+        justify-content  : center;
+        align-items      : center;
+        background-color : var(--c-comp-1);
+      }
+
+      & :where(a) {
+        padding     : 0;
+        font-size   : 1.2rem;
+        font-weight : 500;
+        line-height : 50.8px;
+      }
+    }
+  }
+
   section {
-    font-size      : 1.3em;
     text-align     : center;
     text-transform : uppercase;
     text-shadow    : 0px 1px 1px rgba(0, 0, 0, 0.54);
 
-    h2 {
+    h1 {
+      font-size   : clamp(2rem, 1.8181818181818181rem + 0.9090909090909091vw, 2.5rem);
       font-weight : lighter;
 
       span {
@@ -22,7 +55,7 @@ header {
   }
 
   p {
-    font-size      : .8em;
+    font-size      : clamp(0.8rem, 0.7272727272727273rem + 0.36363636363636354vw, 1rem);
     font-weight    : 100;
     line-height    : 1.5em;
     text-align     : center;
@@ -31,10 +64,12 @@ header {
   }
 
   section:has(span + span) {
+    height           : 52.8px;
     margin-top       : 1em;
     padding          : .5em 1em;
     display          : flex;
     justify-content  : space-between;
+    align-items      : center;
     color            : var(--color1);
     background-color : var(--c-comp-1);
 
@@ -43,34 +78,6 @@ header {
 
       &:hover {
         color : black;
-      }
-    }
-  }
-
-  @container(width > 800px) {
-
-    section:nth-of-type(2) {
-      display  : none;
-      position : absolute;
-    }
-
-    nav {
-      margin-block-start : 1.5rem;
-
-      >ul {
-        display          : flex;
-        max-height       : none;
-        height           : 52.8px;
-        padding          : none;
-        justify-content  : center;
-        align-items      : center;
-        background-color : var(--c-comp-1);
-      }
-
-      & :where(a) {
-        padding     : 0;
-        line-height : 50.8px;
-        font-weight : 500;
       }
     }
   }
@@ -92,7 +99,7 @@ nav {
     background-color : var(--color2);
 
     :where(a) {
-      padding : .2em 1em;
+      padding : .5em;
       display : block;
       color   : var(--color1);
 
