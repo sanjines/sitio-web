@@ -1,7 +1,9 @@
 header {
+  --c-comp-1       : hsl(58, 100%, 73%);
   padding          : var(--padding);
   color            : var(--bodyBgc);
   background-color : var(--color1);
+  container-type   : inline-size;
 
   section {
     font-size      : 1.3em;
@@ -34,13 +36,41 @@ header {
     display          : flex;
     justify-content  : space-between;
     color            : var(--color1);
-    background-color : rgb(255, 250, 117);
+    background-color : var(--c-comp-1);
 
     .hamburger {
       cursor : pointer;
 
       &:hover {
         color : black;
+      }
+    }
+  }
+
+  @container(width > 800px) {
+
+    section:nth-of-type(2) {
+      display  : none;
+      position : absolute;
+    }
+
+    nav {
+      margin-block-start : 1.5rem;
+
+      >ul {
+        display          : flex;
+        max-height       : none;
+        height           : 52.8px;
+        padding          : none;
+        justify-content  : center;
+        align-items      : center;
+        background-color : var(--c-comp-1);
+      }
+
+      & :where(a) {
+        padding     : 0;
+        line-height : 50.8px;
+        font-weight : 500;
       }
     }
   }
