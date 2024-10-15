@@ -5,8 +5,32 @@ header {
   background-color : var(--color1);
   container-type   : inline-size;
 
-  .hamburger {
-    font-size : 1.5rem;
+
+  /* NAVEGATION */
+  nav {
+    height  : auto;
+    padding : 0 0 1em;
+
+    ul {
+      /*js accion para despliegue de menu*/
+      max-height       : 0;
+      margin           : 0 auto;
+      overflow         : hidden;
+      font-family      : 'Roboto';
+      line-height      : 1.5em;
+      transition       : max-height 300ms;
+      background-color : var(--color2);
+
+      :where(a) {
+        padding : .5em;
+        display : block;
+        color   : var(--color1);
+
+        &:hover {
+          background-color : rgba(84, 114, 102, 0.2);
+        }
+      }
+    }
   }
 
   @container(width > 800px) {
@@ -26,7 +50,9 @@ header {
         display          : flex;
         justify-content  : center;
         align-items      : center;
+        gap              : 1rem;
         background-color : var(--c-comp-1);
+        padding          : 0 1rem;
       }
 
       & :where(a) {
@@ -38,13 +64,22 @@ header {
     }
   }
 
+  .hamburger {
+    cursor    : pointer;
+    font-size : 1.5rem;
+
+    &:hover {
+      color : black;
+    }
+  }
+
   section {
     text-align     : center;
     text-transform : uppercase;
     text-shadow    : 0px 1px 1px rgba(0, 0, 0, 0.54);
 
     h1 {
-      font-size   : clamp(2rem, 1.8181818181818181rem + 0.9090909090909091vw, 2.5rem);
+      font-size   : clamp(2rem, 1.818rem + 0.909vw, 2.5rem);
       font-weight : lighter;
 
       span {
@@ -55,7 +90,7 @@ header {
   }
 
   p {
-    font-size      : clamp(0.8rem, 0.7272727272727273rem + 0.36363636363636354vw, 1rem);
+    font-size      : clamp(0.8rem, 0.727rem + 0.363vw, 1rem);
     font-weight    : 100;
     line-height    : 1.5em;
     text-align     : center;
@@ -73,39 +108,6 @@ header {
     color            : var(--color1);
     background-color : var(--c-comp-1);
 
-    .hamburger {
-      cursor : pointer;
 
-      &:hover {
-        color : black;
-      }
-    }
-  }
-}
-
-/* NAVEGATION */
-nav {
-  height  : auto;
-  padding : 0 0 1em;
-
-  ul {
-    /*js accion para despliegue de menu*/
-    max-height       : 0;
-    margin           : 0 auto;
-    overflow         : hidden;
-    font-family      : 'Roboto';
-    line-height      : 1.5em;
-    transition       : max-height 300ms;
-    background-color : var(--color2);
-
-    :where(a) {
-      padding : .5em;
-      display : block;
-      color   : var(--color1);
-
-      &:hover {
-        background-color : rgba(84, 114, 102, 0.2);
-      }
-    }
   }
 }
