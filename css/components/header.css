@@ -1,82 +1,32 @@
+:root {
+  --c-comp-1         : hsl(58, 100%, 73%);
+  --header-height    : 52.8px;
+  --transition-speed : 300ms;
+  --hover-bg-color   : hsl(156deg 15% 39% 0.2);
+  --text-shadow      : 0 1px 1px rgba(0, 0, 0, 0.54);
+}
+
 header {
-  --c-comp-1       : hsl(58, 100%, 73%);
-  padding          : 2rem 0 0;
+  padding-top      : 2rem;
   color            : var(--bodyBgc);
   background-color : var(--color1);
   container-type   : inline-size;
 
-
-  /* NAVEGATION */
-  nav {
-    height  : auto;
-    padding : 0 0 1em;
-
-    ul {
-      /*js accion para despliegue de menu*/
-      max-height       : 0;
-      margin           : 0 auto;
-      overflow         : hidden;
-      font-family      : 'Roboto';
-      line-height      : 1.5em;
-      transition       : max-height 300ms;
-      background-color : var(--color2);
-
-      :where(a) {
-        padding : .5em;
-        display : block;
-        color   : var(--color1);
-
-        &:hover {
-          background-color : rgba(84, 114, 102, 0.2);
-        }
-      }
-    }
+  /* Typography */
+  p {
+    font-size      : clamp(0.8rem, 0.727rem + 0.364vw, 1rem);
+    font-weight    : 100;
+    line-height    : 1.5;
+    text-align     : center;
+    letter-spacing : -0.05em;
+    opacity        : 0.7;
   }
 
-  @container(width > 800px) {
-
-    section:nth-of-type(2) {
-      position : absolute;
-      display  : none;
-    }
-
-    nav {
-      margin-block-start : 1.5rem;
-
-      >ul {
-        height           : 52.8px;
-        max-height       : none;
-        padding          : none;
-        display          : flex;
-        justify-content  : center;
-        align-items      : center;
-        gap              : 1rem;
-        background-color : var(--c-comp-1);
-        padding          : 0 1rem;
-      }
-
-      & :where(a) {
-        padding     : 0;
-        font-size   : 1.2rem;
-        font-weight : 500;
-        line-height : 50.8px;
-      }
-    }
-  }
-
-  .hamburger {
-    cursor    : pointer;
-    font-size : 1.5rem;
-
-    &:hover {
-      color : black;
-    }
-  }
-
+  /* Sections */
   section {
     text-align     : center;
     text-transform : uppercase;
-    text-shadow    : 0px 1px 1px rgba(0, 0, 0, 0.54);
+    text-shadow    : var(--text-shadow);
 
     h1 {
       font-size   : clamp(2rem, 1.818rem + 0.909vw, 2.5rem);
@@ -89,25 +39,79 @@ header {
     }
   }
 
-  p {
-    font-size      : clamp(0.8rem, 0.727rem + 0.363vw, 1rem);
-    font-weight    : 100;
-    line-height    : 1.5em;
-    text-align     : center;
-    letter-spacing : -0.05em;
-    opacity        : .7;
-  }
-
   section:has(span + span) {
-    height           : 52.8px;
+    height           : var(--header-height);
     margin-top       : 1em;
-    padding          : .5em 1em;
+    padding          : 0.5em 1em;
     display          : flex;
     justify-content  : space-between;
     align-items      : center;
     color            : var(--color1);
     background-color : var(--c-comp-1);
+  }
 
+  /* Navigation */
+  nav {
+    padding-bottom : 1em;
 
+    ul {
+      max-height       : 0;
+      margin           : 0 auto;
+      overflow         : hidden;
+      font-family      : 'Roboto', sans-serif;
+      line-height      : 1.5;
+      transition       : max-height var(--transition-speed);
+      background-color : var(--color2);
+
+      a {
+        padding : 0.5em;
+        display : block;
+        color   : var(--color1);
+
+        &:hover {
+          background-color : var(--hover-bg-color);
+        }
+      }
+    }
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    font-size : 1.5rem;
+    cursor    : pointer;
+
+    &:hover {
+      color : var(--hover-gbc-color);
+    }
+  }
+
+  /* Responsive Design */
+  @container (width > 800px) {
+    section:nth-of-type(2) {
+      position : absolute;
+      display  : none;
+    }
+
+    nav {
+      margin-block-start : 1.5rem;
+
+      >ul {
+        height           : var(--header-height);
+        max-height       : none;
+        display          : flex;
+        justify-content  : center;
+        align-items      : center;
+        gap              : 1rem;
+        background-color : var(--c-comp-1);
+        padding          : 0 1rem;
+      }
+
+      a {
+        padding     : 0;
+        font-size   : 1.2rem;
+        font-weight : 500;
+        line-height : var(--header-height);
+      }
+    }
   }
 }
